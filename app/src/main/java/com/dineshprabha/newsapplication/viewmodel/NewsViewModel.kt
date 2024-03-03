@@ -1,4 +1,4 @@
-package com.dineshprabha.newsapplication.Data.viewmodel
+package com.dineshprabha.newsapplication.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -16,6 +16,8 @@ class NewsViewModel(application: Application) : AndroidViewModel(application = a
 
     private val apiService = APIService()
 
+    private var isAscendingOrder = true // Flag to track sorting order
+
     private val _articleList = MutableLiveData<List<Article>>()
     val articleList : LiveData<List<Article>> = _articleList
 
@@ -26,5 +28,22 @@ class NewsViewModel(application: Application) : AndroidViewModel(application = a
             }
             _articleList.value = result?.articles
         }
+    }
+
+    // Other code
+
+    fun toggleSortingOrder() {
+        isAscendingOrder = !isAscendingOrder
+        // Refresh the article list to apply sorting changes
+        fetchNews()
+    }
+    fun getSortedArticles(articles: List<Article>?): List<Article> {
+        return articles?.let {
+            if (isAscendingOrder) {
+                it.sortedBy { article -> article.publishedAt }
+            } else {
+                it.sortedByDescending { article -> article.publishedAt }
+            }
+        } ?: emptyList()
     }
 }
