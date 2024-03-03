@@ -12,10 +12,7 @@ import com.bumptech.glide.Glide
 import com.dineshprabha.newsapplication.Data.model.Article
 import com.dineshprabha.newsapplication.databinding.ArticleListItemBinding
 
-class NewsAdapter(
-    private val onItemClickListener: (Article) -> Unit,
-    private val onFilterClickListener: () -> Unit
-) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     inner class NewsViewHolder(private val binding : ArticleListItemBinding):
             RecyclerView.ViewHolder(binding.root){
@@ -28,7 +25,6 @@ class NewsAdapter(
                     article.url?.let { openArticleUrl(it, itemView.context) }
                 }
             }
-
         }
 
         fun bind(article: Article?) {
