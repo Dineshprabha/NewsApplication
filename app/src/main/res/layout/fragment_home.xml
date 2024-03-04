@@ -65,16 +65,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/roboto_bold"
-            android:text="Home"
+            android:text="News"
             android:textColor="@color/purple_500"
             android:textSize="35sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imgSearch"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_search" />
 
     </LinearLayout>
 
@@ -118,7 +113,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/ic_arrow_down_24" />
+            android:src="@drawable/sort_desc" />
 
     </LinearLayout>
 

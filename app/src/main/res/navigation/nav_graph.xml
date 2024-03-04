@@ -16,8 +16,8 @@
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.dineshprabha.newsapplication.ui.fragments.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        android:id="@+id/notificationFragment"
+        android:name="com.dineshprabha.newsapplication.ui.fragments.NotificationFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

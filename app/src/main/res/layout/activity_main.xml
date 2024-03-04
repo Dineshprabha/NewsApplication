@@ -23,7 +23,7 @@
         android:id="@+id/btm_nav"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/purple_500"
+        app:backgroundTint="@color/purple_500"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"

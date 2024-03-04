@@ -54,4 +54,18 @@ class NewsViewModel(application: Application) : AndroidViewModel(application = a
             }
         } ?: emptyList()
     }
+
+    fun getSortedArticles(query: String?): List<Article> {
+        val articles = _articleList.value ?: return emptyList()
+
+        return if (query.isNullOrEmpty()) {
+            // If query is empty, return all articles sorted alphabetically
+            articles.data!!.sortedBy { it.title }
+        } else {
+            // If query is not empty, filter articles based on the query and sort them alphabetically
+            articles.data!!.filter { it.title.contains(query, ignoreCase = true) }
+                .sortedBy { it.title }
+        }
+    }
+
 }

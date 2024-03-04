@@ -64,9 +64,9 @@ class HomeFragment : Fragment() {
 
             // Update icon based on sorting order
             if (newsViewModel.isAscendingOrder) {
-                binding.filter.setImageResource(R.drawable.ic_arrow_down_24) // Use ascending icon
+                binding.filter.setImageResource(R.drawable.sort_desc) // Use ascending icon
             } else {
-                binding.filter.setImageResource(R.drawable.ic_arrow_up_24) // Use descending icon
+                binding.filter.setImageResource(R.drawable.sort_aces) // Use descending icon
             }
         }
 

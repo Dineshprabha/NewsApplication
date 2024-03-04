@@ -9,8 +9,4 @@
         android:icon="@drawable/ic_search"
         android:id="@+id/searchFragment"/>
 
-    <item android:title=""
-        android:icon="@drawable/ic_settings"
-        android:id="@+id/settingsFragment"/>
-
 </menu>

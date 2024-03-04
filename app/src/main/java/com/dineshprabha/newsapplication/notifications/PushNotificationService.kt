@@ -16,7 +16,7 @@ import com.dineshprabha.newsapplication.ui.MainActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
-class MyFirebaseMessagingService: FirebaseMessagingService() {
+class PushNotificationService: FirebaseMessagingService() {
 
     //generate the notification
     @RequiresApi(Build.VERSION_CODES.M)
@@ -34,7 +34,7 @@ class MyFirebaseMessagingService: FirebaseMessagingService() {
 
         remoteView.setTextViewText(R.id.title, title)
         remoteView.setTextViewText(R.id.message, messageBody)
-        remoteView.setImageViewResource(R.id.app_logo, R.drawable.ic_notifications_active)
+        remoteView.setImageViewResource(R.id.app_logo, R.drawable.ic_launcher_foreground)
 
         return remoteView
     }
