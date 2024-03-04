@@ -17,7 +17,7 @@ class NetworkChecker(val connectivityManager: ConnectivityManager) {
 
     //Verify the network type to fetch data from api
     @RequiresApi(Build.VERSION_CODES.M)
-    private fun hasValidInternetConnection(): Boolean {
+    fun hasValidInternetConnection(): Boolean {
         val network = connectivityManager?.activeNetwork
         val capabilities = connectivityManager?.getNetworkCapabilities(network) ?: return false
 
