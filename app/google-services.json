@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105079751409",
+    "project_id": "newsapplication-c197d",
+    "storage_bucket": "newsapplication-c197d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105079751409:android:9112aee9f05875baee1f50",
+        "android_client_info": {
+          "package_name": "com.dineshprabha.newsapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNcK7GgHtixzqEYcyvMK2bGHm6vrIC56s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
